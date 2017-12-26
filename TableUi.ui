@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>646</width>
+    <height>326</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑 Light</family>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Table的操作</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>641</width>
+      <height>318</height>
+     </rect>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::DoubleClicked</set>
+    </property>
+    <property name="gridStyle">
+     <enum>Qt::SolidLine</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>646</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>菜单</string>
+    </property>
+    <addaction name="addaction"/>
+    <addaction name="deleteaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>内容</string>
+    </property>
+    <addaction name="additemaction"/>
+    <addaction name="updateitemaction"/>
+    <addaction name="deleteitemaction"/>
+    <addaction name="separator"/>
+    <addaction name="savetodbaction"/>
+    <addaction name="separator"/>
+    <addaction name="exporttoexcelaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>说明</string>
+    </property>
+    <addaction name="helpaction"/>
+    <addaction name="declareaction"/>
+    <addaction name="qtaction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <action name="addaction">
+   <property name="text">
+    <string>添加行</string>
+   </property>
+  </action>
+  <action name="deleteaction">
+   <property name="text">
+    <string>删除行</string>
+   </property>
+  </action>
+  <action name="additemaction">
+   <property name="text">
+    <string>添加一行</string>
+   </property>
+  </action>
+  <action name="updateitemaction">
+   <property name="text">
+    <string>修改一行</string>
+   </property>
+  </action>
+  <action name="deleteitemaction">
+   <property name="text">
+    <string>删除一行</string>
+   </property>
+  </action>
+  <action name="savetodbaction">
+   <property name="text">
+    <string>保存到数据库</string>
+   </property>
+  </action>
+  <action name="importfromexcelaction">
+   <property name="text">
+    <string>从excel导入</string>
+   </property>
+  </action>
+  <action name="exporttoexcelaction">
+   <property name="text">
+    <string>导出到excel</string>
+   </property>
+  </action>
+  <action name="helpaction">
+   <property name="text">
+    <string>帮助</string>
+   </property>
+  </action>
+  <action name="declareaction">
+   <property name="text">
+    <string>说明</string>
+   </property>
+  </action>
+  <action name="qtaction">
+   <property name="text">
+    <string>关于Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

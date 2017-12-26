@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="myres">
+        <file>img123/add9.png</file>
+        <file>img123/addcir9.png</file>
+        <file>img123/app9.png</file>
+        <file>img123/edit9.png</file>
+        <file>img123/excel9.png</file>
+        <file>img123/favor9.png</file>
+        <file>img123/help9.png</file>
+        <file>img123/save9.png</file>
+        <file>img123/sub9.png</file>
+        <file>img123/subcir9.png</file>
+    </qresource>
+</RCC>
