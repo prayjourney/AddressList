@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from pyqt2nd import TableUi, InfoDlg, tableuires_rc
 
 _author = "游侠最光阴"  # 设置作者
-_version = "V0.9.8"  # 设置版本号
+_version = "V0.9.9"  # 设置版本号
 
 
 class TableUiOpt(QtWidgets.QMainWindow, TableUi.Ui_MainWindow):
