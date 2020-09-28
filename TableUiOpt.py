@@ -7,13 +7,14 @@ from sqlite3 import DatabaseError
 
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QBrush, QFont
+from PyQt5.QtGui import QBrush, QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QTableWidgetItem, QMessageBox
 from openpyxl import Workbook
 
 # from pyqt2nd import TableUi, InfoDlg, tableuires_rc
 import InfoDlg
 import TableUi
+import tableuires_rc
 
 _author = "游侠最光阴"  # 设置作者
 _version = "V0.9.8"  # 设置版本号
