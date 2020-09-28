@@ -1,16 +1,19 @@
 # -*- coding:utf-8-*-
 
 import os
-import sys
 import sqlite3
-from openpyxl import Workbook
+import sys
 from sqlite3 import DatabaseError
-from PyQt5 import QtWidgets
+
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QBrush, QFont
 from PyQt5.QtWidgets import QApplication, QTableWidgetItem, QMessageBox
-from PyQt5 import QtCore, QtGui, QtWidgets
-from pyqt2nd import TableUi, InfoDlg, tableuires_rc
+from openpyxl import Workbook
+
+# from pyqt2nd import TableUi, InfoDlg, tableuires_rc
+import InfoDlg
+import TableUi
 
 _author = "游侠最光阴"  # 设置作者
 _version = "V0.9.8"  # 设置版本号
@@ -160,7 +163,7 @@ class TableUiOpt(QtWidgets.QMainWindow, TableUi.Ui_MainWindow):
             lineedphone = self.tableWidget.item(index, 4)
             lineedotherinfo = self.tableWidget.item(index, 5)
             if (lineedno == None or lineedname == None or lineedage == None or
-                        comboxgender == None or lineedphone == None or lineedotherinfo == None):
+                    comboxgender == None or lineedphone == None or lineedotherinfo == None):
                 QMessageBox.warning(self, "警告！", "所选人员信息不能为空！")
                 return  # 此处让messagebox位于中间，让dlg不出现
             else:
@@ -325,7 +328,7 @@ class MyInsertDialog(QtWidgets.QDialog, InfoDlg.Ui_Dialog):
         lineedotherinfo = self.textEdOtherinfo.toPlainText()  # 获取文本内容
         # 不能使用["|"]运算符，而要使用or运算符，二者的区别，需要注意下
         if (lineedname == '' or lineedage == '' or
-                    lineedphone == '' or lineedotherinfo == ''):
+                lineedphone == '' or lineedotherinfo == ''):
             QMessageBox.warning(self, "警告！", "人员信息不能为空！")
             return
         if validrow == 0:
@@ -381,7 +384,7 @@ class MyUpdateDialog(QtWidgets.QDialog, InfoDlg.Ui_Dialog):
         lineedphone = tableuiopt.tableWidget.item(rowindex, 4)
         lineedotherinfo = tableuiopt.tableWidget.item(rowindex, 5)
         if (lineedno == None or lineedname == None or lineedage == None or
-                    comboxgender == None or lineedphone == None or lineedotherinfo == None):
+                comboxgender == None or lineedphone == None or lineedotherinfo == None):
             # s = QMessageBox()
             # s.setGeometry(self, 200, 300)
             QMessageBox.warning(self, "警告！", "所选人员信息不能为空！")
@@ -410,7 +413,7 @@ class MyUpdateDialog(QtWidgets.QDialog, InfoDlg.Ui_Dialog):
         lineedotherinfo = self.textEdOtherinfo.toPlainText()  # 获取文本内容
         # 不能使用["|"]运算符，而要使用or运算符，二者的区别，需要注意下
         if (lineedno == '' or lineedname == '' or lineedage == '' or
-                    lineedphone == '' or lineedotherinfo == ''):
+                lineedphone == '' or lineedotherinfo == ''):
             print("111")
             QMessageBox.warning(self, "警告！", "人员信息不能为空！")
             return 0
